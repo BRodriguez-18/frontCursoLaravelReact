@@ -1,7 +1,8 @@
-
+import useQuiosco from "../hooks/useQuiosco"
 
 export default function Categoria({categoria}){
-    const {icono, id, nombre} = categoria
+  const {handleClickCategoria}  = useQuiosco();
+  const {icono, id, nombre} = categoria
     
     console.log(categoria)
     return (
@@ -11,7 +12,13 @@ export default function Categoria({categoria}){
             alt="imaen-icono" 
             className="w-12"
             />
-         <p className="text-lg font-bold cursor-pointer">{nombre}</p>   
+         <button 
+            className="text-lg font-bold cursor-pointer"
+             type="button"
+             onClick={()=>handleClickCategoria(id)}
+             >
+              {nombre}
+          </button>   
     </div>
   )
 }

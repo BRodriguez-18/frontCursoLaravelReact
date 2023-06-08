@@ -1,7 +1,10 @@
-import {categorias} from "../data/categorias"
+import useQuiosco from "../hooks/useQuiosco"
 import Categoria from "./Categoria"
 
 export default function Sidebar(){
+
+    const { categorias } = useQuiosco();
+
     return (
         <aside className="md:w-72">
 
@@ -14,7 +17,8 @@ export default function Sidebar(){
         </div>
         <div className="mt-10">
             {categorias.map( categoria => (
-                <Categoria 
+                <Categoria
+                    key={categoria.id}
                     categoria={categoria}
                 />
             ))}
@@ -24,6 +28,7 @@ export default function Sidebar(){
                     type="button"
                     className="text-center bg-red-500 w-full p-3 font-bold text-white truncate"
                     >
+                        Cancelar Orden
                 </button>
         </div>
         </aside>
