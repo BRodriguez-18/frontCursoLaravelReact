@@ -11,7 +11,7 @@ export default function Sidebar(){
         <div className="p-4">
            <img 
                 className="w-40"
-                src="img/logo.svg" 
+                src="img/FP_INSTAGRAM A&G.png" 
                 alt="Imagen Logo"
             />
         </div>
