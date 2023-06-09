@@ -3,7 +3,7 @@ import useQuiosco from "../hooks/useQuiosco"
 
 export default function Producto ({producto}) {
   
-  const {handleClickModal} = useQuiosco();
+  const {handleClickModal, handleSetProducto} = useQuiosco();
   const {nombre, imagen, precio} = producto
   
 
