@@ -24,6 +24,16 @@ const QuioscoProvider = ({children}) => {
         setProducto(producto)
     }
 
+    const handleAgregarPedido = ({categoria_id, imagen, ...producto}) => {
+        
+        if(pedido.some(pedidoState => pedidoState.id === producto.id)){
+            const productoEdicion = pedido.filter(pedidoState => pedidoState.id === producto.id)[0]
+            setCantidad(productoEdicion.cantidad)
+            setEdicion(true)
+        } else{
+            setPedido([...pedido, producto])
+        }
+    }
     return(
         <QuioscoContext.Provider  
             value={{
@@ -34,7 +44,8 @@ const QuioscoProvider = ({children}) => {
                 handleClickModal,
                 producto,
                 handleSetProducto,
-                pedido
+                pedido,
+                handleAgregarPedido
 
             }}>
                 {children}
