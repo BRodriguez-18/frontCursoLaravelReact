@@ -1,9 +1,11 @@
-import {Outlet} from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import Modal from 'react-modal'
+import { ToastContainer } from 'react-toastify'
+import "react-toastify/dist/ReactToastify.css";
 import Sidebar from '../Components/Sidebar'
 import Resumen from '../Components/Resumen'
-import useQuiosco from '../hooks/useQuiosco'
 import ModalProducto from '../components/ModalProducto'
+import useQuiosco from '../hooks/useQuiosco'
 
 const customStyles = {
   content: {
@@ -18,9 +20,9 @@ const customStyles = {
 
 Modal.setAppElement('#root')
 
-const Layout = () => {
+export default function Layout () {
 
-  const {modal, handleClickModal} = useQuiosco();
+  const {modal} = useQuiosco();
 
   return (
     <>
@@ -40,8 +42,8 @@ const Layout = () => {
         <ModalProducto />
       </Modal>
     
+      <ToastContainer />
     </>
   )
 }
 
-export default Layout

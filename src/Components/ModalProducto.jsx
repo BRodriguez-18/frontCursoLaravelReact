@@ -16,7 +16,7 @@ export default function ModalProductos () {
             setCantidad(productoEdicion.cantidad)
             setEdicion(true)
       }
-  },[pedido])
+  }, [pedido])
 
   return (
     <div className="md:flex items-center gap-10">
