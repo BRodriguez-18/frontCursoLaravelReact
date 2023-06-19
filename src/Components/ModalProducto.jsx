@@ -71,7 +71,10 @@ export default function ModalProductos () {
         type="button"
         className="bg-indigo-600 hover:bg-inigo-800 px-5 py-2 mt-5 text-white
         font-bold uppercase rounded"
-        onClick={()=> handleAgregarPedido({...producto, cantidad})}
+        onClick={()=> { 
+          handleAgregarPedido({...producto, cantidad})
+        handleClickModal()
+        }}      
       >
         {edicion ? 'Guardar Cambios' : 'Añadir al Pedido'}
       </button>
