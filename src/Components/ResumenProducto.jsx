@@ -2,7 +2,7 @@ import useQuiosco from "../hooks/useQuiosco";
 import {formatearDinero} from "../helpers"
 
 export default function ResumenProducto({producto}) {
-    const {handleEditarCantidad, handle} = useQuiosco();
+    const {handleEditarCantidad, handleEliminarProductoPedido} = useQuiosco();
     const {id, nombre, precio, cantidad} = producto
     return (
         <div className="shadow space-y-1 p-4 bg-white">
