@@ -12,11 +12,12 @@ export default function Inicio() {
       refreshInterval: 1000
   })
   
-  console.log(data)
+ 
   console.log(error)
   console.log(isLoading)
+ if(isLoading) return 'Cargando...';
+ if(error) return 'error'
 
-  if(isLoading) return 'Cargando...';
   
   const productos = data.data.filter(producto => producto.categoria_id === categoriaActual.id)
 

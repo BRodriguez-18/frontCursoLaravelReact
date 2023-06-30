@@ -3,7 +3,7 @@ import Layout from './layouts/Layout'
 import AuthLayout from './layouts/AuthLayout'
 import Inicio from './views/Inicio'
 import Login from './views/Login'
-import Register from './views/Register'
+import Registro from './views/Registro'
 const router = createBrowserRouter([
     {path: '/',
     element: <Layout />,
@@ -23,8 +23,8 @@ const router = createBrowserRouter([
                 element: <Login />
             },
             {
-                path: '/auth/register',
-                element: <Register />
+                path: '/auth/registro',
+                element: <Registro />
             }
         ]
     }
