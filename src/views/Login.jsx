@@ -28,7 +28,7 @@ export default function Login() {
 
       login(datos, setErrores)
 
-      // registro(datos, setErrores)
+      
 
      
     }
@@ -85,7 +85,7 @@ export default function Login() {
         </form>
       </div>
       <nav className="mt-5">
-      <Link to="/auth/register">
+      <Link to="/auth/registro">
           ¿No tienes cuenta? Crea una
       </Link>
       </nav>
